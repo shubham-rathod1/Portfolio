@@ -1,11 +1,13 @@
 import React from "react"
+import Home from "./Pages/Home"
 
 import Contact from "./Sections/Contact"
 
 function App() {
   return (
-    <div className="App">
-      <Contact />
+    <div>
+      {/* <Contact /> */}
+      <Home />
     </div>
   );
 }
