@@ -1,0 +1,32 @@
+.btn {
+    margin: 20px auto;
+    border: none;
+    padding: 10px 44px;
+    font-size: 36px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #53C6AA;
+    color: #53C6AA;
+  }
+  .btn::before {
+    transition: all 0.4s cubic-bezier(0.68, -0.16, 0.2, 1.1);
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #53C6AA;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .btn .btnText {
+    color: white;
+    mix-blend-mode: hard-light;
+  }
+  .btn:hover::before {
+    background: #53C6AA;
+    width: 100%;
+    /* color: black; */
+  }
+  .btn .btnText:hover {
+      color: black;
+  }
