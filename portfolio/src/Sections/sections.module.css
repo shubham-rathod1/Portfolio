@@ -43,3 +43,11 @@
   cursor: pointer;
 }
 /* rgb(167, 164, 164) */
+
+.contacticon {
+  margin: 0px 5px;
+}
+.contacticon:hover {
+  fill: #53c6aa;
+  cursor: pointer;
+}
