@@ -10,6 +10,10 @@ import {
   Section,
   HTMLTEXT,
   MenuLink,
+  HomeSection,
+  Heading,
+  SpanButton,
+  Paragraph,
 } from "./pages.module";
 
 export default function Home() {
@@ -47,7 +51,7 @@ export default function Home() {
           <hr />
           {menuLinks.map((item) => {
             return (
-              <div >
+              <div>
                 <MenuLink>{item}</MenuLink>;
               </div>
             );
@@ -57,8 +61,30 @@ export default function Home() {
           style={{ display: "flex", flexDirection: "column", width: "100%" }}
         >
           <div style={{ flexBasis: "90%" }}>
-            <Contact />
-            <Contact />
+            <HTMLTEXT html>{`<html>`}</HTMLTEXT>
+            <HTMLTEXT body>{`<body>`}</HTMLTEXT>
+            <HTMLTEXT h1>{`<h1>`}</HTMLTEXT>
+            <HomeSection>
+              <Heading>
+                Hi,
+                <br />
+                I'm Shubham,
+                <br />
+                Web Developer
+              </Heading>{" "}
+              <HTMLTEXT>{`</h1>`}</HTMLTEXT>
+              <HTMLTEXT>{`<p>`}</HTMLTEXT>
+              <Paragraph fullstack typewriter>Full Stack Web Developer</Paragraph>
+              <HTMLTEXT>{`</p>`}</HTMLTEXT>
+              <div>
+                <Button>
+                  <SpanButton>Contact me!</SpanButton>
+                </Button>
+              </div>
+            </HomeSection>
+
+            {/* <Contact />
+            <Contact /> */}
           </div>
         </div>
       </Section>
