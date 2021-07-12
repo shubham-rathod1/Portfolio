@@ -77,6 +77,9 @@ const HomeSection = styled.div`
   align-items: left;
   padding-left: 6%;
 `;
+const AboutSection = styled.div`
+  padding-left: 6%;
+`
 const Heading = styled.p`
   font-size: 100px;
   font-weight: 600;
@@ -104,5 +107,6 @@ export {
   HomeSection,
   Heading,
   SpanButton,
-  Paragraph
+  Paragraph,
+  AboutSection
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, CssBaseline } from "@material-ui/core";
 import Contact from "../Sections/Contact";
+import About from "../Sections/About";
 import icon from "./icon2.svg";
 import styles from "./home.module.css";
 
@@ -14,6 +15,7 @@ import {
   Heading,
   SpanButton,
   Paragraph,
+  AboutSection
 } from "./pages.module";
 
 export default function Home() {
@@ -74,7 +76,9 @@ export default function Home() {
               </Heading>{" "}
               <HTMLTEXT>{`</h1>`}</HTMLTEXT>
               <HTMLTEXT>{`<p>`}</HTMLTEXT>
-              <Paragraph fullstack typewriter>Full Stack Web Developer</Paragraph>
+              <Paragraph fullstack typewriter>
+                Full Stack Web Developer
+              </Paragraph>
               <HTMLTEXT>{`</p>`}</HTMLTEXT>
               <div>
                 <Button>
@@ -82,7 +86,9 @@ export default function Home() {
                 </Button>
               </div>
             </HomeSection>
-
+            <AboutSection>
+              <About />
+            </AboutSection>
             {/* <Contact />
             <Contact /> */}
           </div>
