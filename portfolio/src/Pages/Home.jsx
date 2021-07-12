@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, CssBaseline } from "@material-ui/core";
+import { Container, CssBaseline, styled } from "@material-ui/core";
 import Contact from "../Sections/Contact";
 import About from "../Sections/About";
 import icon from "./icon2.svg";
@@ -36,7 +36,7 @@ export default function Home() {
             }}
           >
             <div>
-              <svg
+              <svg className={styles.svgicons}
                 xmlns="http://www.w3.org/2000/svg"
                 width="80"
                 height="80"

@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montez&display=swap");
 
-svg:hover {
+.svgicons:hover {
   fill: #53c6aa;
 }
-svg {
+.svgicons {
   width: 80px;
 }

@@ -18,7 +18,7 @@ const AboutPara = styled.p`
   line-height: 24px;
   font-family: sans-serif;
   font-weight: 400;
-  padding: 0% 20%;
+  padding: ${params => params.meetme ? "0% 0%" : "0% 20%"}; 
   /* text-align: left; */
   text-align: center;
 `;
@@ -29,7 +29,10 @@ const AboutStack = styled.div`
   margin: 2% 0%;
 `;
 const ContactIcons = styled.div`
-    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 `
 
 export { AboutHeading, AboutStack, AboutPara,ContactIcons };
