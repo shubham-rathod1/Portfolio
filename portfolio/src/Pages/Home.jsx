@@ -1,15 +1,57 @@
 import React from "react";
 import { Container, CssBaseline } from "@material-ui/core";
 import Contact from "../Sections/Contact";
+import icon from "./icon2.svg";
+import styles from "./home.module.css";
 
-import { Button, MenuSection, Section } from "./pages.module";
+import {
+  Button,
+  MenuSection,
+  Section,
+  HTMLTEXT,
+  MenuLink,
+} from "./pages.module";
 
 export default function Home() {
+  const menuLinks = ["About", "Projects", "Work", "Blog", "Contact"];
+
   return (
     <div style={{ backgroundColor: "#1D1D1D", ovarflow: "hidden" }}>
       <Section>
         <MenuSection>
-          <p >hello</p>
+          <div
+            style={{
+              height: "27%",
+              backgroundColor: "black",
+              display: "flex",
+              alignItems: "center",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          >
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="80"
+                height="80"
+                fill="#fff"
+                viewBox="-3 -3 30 30"
+              >
+                <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 17h-12v-2h12v2zm0-4h-12v-2h12v2zm0-4h-12v-2h12v2z" />
+              </svg>
+              <HTMLTEXT>
+                <i>{`<p>menu</p>`}</i>
+              </HTMLTEXT>
+            </div>
+          </div>
+          <hr />
+          {menuLinks.map((item) => {
+            return (
+              <div >
+                <MenuLink>{item}</MenuLink>;
+              </div>
+            );
+          })}
         </MenuSection>
         <div
           style={{ display: "flex", flexDirection: "column", width: "100%" }}
@@ -17,11 +59,9 @@ export default function Home() {
           <div style={{ flexBasis: "90%" }}>
             <Contact />
             <Contact />
-
           </div>
         </div>
       </Section>
     </div>
   );
 }
-// style={{ position: "sticky", top: "0" }}
