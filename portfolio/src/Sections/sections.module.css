@@ -51,3 +51,7 @@
   fill: #53c6aa;
   cursor: pointer;
 }
+
+.media {
+  height: 40vh;  
+}

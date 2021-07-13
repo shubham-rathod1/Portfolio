@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Grid } from "@material-ui/core";
 
 import {
-  AboutHeading,
+  Heading,
   AboutPara,
   AboutStack,
   ContactIcons,
@@ -23,7 +23,7 @@ export default function About() {
               backgroundColor: "#1D1D1D",
             }}
           >
-            <AboutHeading>About Me...</AboutHeading>
+            <Heading about>About me...</Heading>
             <AboutPara>
               Full Stack Developer with experience in designing, developing, and
               implementing applications and solutions using the MERN stack.
