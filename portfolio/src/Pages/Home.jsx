@@ -2,6 +2,7 @@ import React from "react";
 import { Container, CssBaseline, styled } from "@material-ui/core";
 import Contact from "../Sections/Contact";
 import About from "../Sections/About";
+import Blog from "../Sections/Blog"
 import icon from "./icon2.svg";
 import styles from "./home.module.css";
 
@@ -15,7 +16,7 @@ import {
   Heading,
   SpanButton,
   Paragraph,
-  AboutSection
+  AboutSection,
 } from "./pages.module";
 
 export default function Home() {
@@ -36,7 +37,8 @@ export default function Home() {
             }}
           >
             <div>
-              <svg className={styles.svgicons}
+              <svg
+                className={styles.svgicons}
                 xmlns="http://www.w3.org/2000/svg"
                 width="80"
                 height="80"
@@ -89,8 +91,8 @@ export default function Home() {
             <AboutSection>
               <About />
             </AboutSection>
-            {/* <Contact />
-            <Contact /> */}
+            <Blog />
+            <Contact />
           </div>
         </div>
       </Section>
