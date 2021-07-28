@@ -53,5 +53,17 @@
 }
 
 .media {
-  height: 40vh;  
+  height: 40vh;
+}
+.imageList {
+  width: 500px;
+  height: 450px;
+}
+.imageListItems {
+  background-size: cover;
+}
+.imageListItems:hover {
+  background-color: rgb(150, 11, 11);
+  opacity: 0.2;
+  z-index: 2;
 }

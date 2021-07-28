@@ -2,7 +2,7 @@ import React from "react";
 import { Container, CssBaseline, styled } from "@material-ui/core";
 import Contact from "../Sections/Contact";
 import About from "../Sections/About";
-import Blog from "../Sections/Blog"
+import Blog from "../Sections/Blog";
 import icon from "./icon2.svg";
 import styles from "./home.module.css";
 
@@ -18,6 +18,7 @@ import {
   Paragraph,
   AboutSection,
 } from "./pages.module";
+import Projects from "../Sections/Projects";
 
 export default function Home() {
   const menuLinks = ["About", "Projects", "Work", "Blog", "Contact"];
@@ -91,6 +92,7 @@ export default function Home() {
             <AboutSection>
               <About />
             </AboutSection>
+            <Projects />
             <Blog />
             <Contact />
           </div>

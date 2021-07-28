@@ -1,0 +1,145 @@
+
+
+/* body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+  font-size: 18px;
+} */
+
+/* $top-height: 14em;
+  $main-clr: rgb(0, 255, 21); */
+.cardwrapper {
+  border-radius: 0.5em;
+  box-shadow: 0 0 30px rgba(17, 17, 17, 0.281);
+  position: relative;
+}
+.cardwrapper:before {
+  position: absolute;
+  content: "";
+  inset: -0.5em;
+  background-color: #68f5d9;
+  border-radius: inherit;
+  transition-duration: 200ms;
+  transition-property: transform, opacity;
+  pointer-events: none;
+  opacity: 0.1;
+}
+
+.card {
+  position: relative;
+  padding-top: 14em;
+  width: 280px;
+  overflow: hidden;
+  border-radius: inherit;
+  display: flex;
+  justify-content: center;
+  transition: transform 200ms;
+  will-change: transform;
+}
+
+.top {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 14em;
+  /* background: url(https://qph.fs.quoracdn.net/main-qimg-a372f268849100e99b3f2e688f5c937f); */
+  /* background-size: cover; */
+  /* background-position: center; */
+  transition: 800ms height;
+  z-index: -1;
+  transition-delay: 500ms;
+}
+
+/* $card-padding: 1.6em; */
+/* $bottom-bg-clr: #fff; */
+.bottom {
+  padding: 1.6em;
+  padding-bottom: 3em;
+  box-shadow: 0 2em 0 #fff;
+  transition: transform 500ms;
+  background: #fff;
+  z-index: 0;
+  width: 100%;
+}
+
+.cardtitle {
+  text-transform: capitalize;
+  padding: 0.6em 0;
+  font-weight: bold;
+}
+.cardcategorytitle {
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.warrior {
+  display: block;
+  position: relative;
+}
+.warrioricon {
+  position: absolute;
+  height: 1.8em;
+  width: auto;
+  top: -100%;
+  left: 80%;
+  bottom: -100%;
+  margin: auto;
+  /* background-color: rgb(251, 48, 48); */
+  fill: #fff;
+  border-radius: 50%;
+  padding: 0.2em;
+}
+
+.name {
+  color: blue;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-left: 0.4em;
+  text-decoration: none;
+}
+
+.cardwrapper.top:hover {
+  height: 100%;
+  transition-delay: 0s;
+}
+.cardwrapper.bottom:hover {
+  transform: translateY(100%);
+  transition-duration: 800ms;
+  transition-timing-function: cubic-bezier(1, -0.47, 0.56, 0.65);
+}
+.cardwrapper.btn:hover {
+  opacity: 1;
+}
+.cardwrapper:hover::before {
+  transform: skew(10deg);
+  opacity: 0.9;
+}
+
+.btn {
+  position: absolute;
+  bottom: 5em;
+  padding: 0.5em 0.8em;
+  font-size: 1.1em;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgb(0, 255, 21);
+  transition-property: background-color, color, transform;
+  transition-duration: 300ms, 300ms, 100ms;
+}
+/* &:hover {
+      background: rgba(255, 255, 255, 0.952);
+      color: #111;
+    } */
+.btn:hover {
+  background: rgba(255, 255, 255, 0.952);
+  color: #111;
+}
+.btn:active {
+  transform: translateY(0.3em);
+}
+/* &:active {
+      transform: translateY(0.3em);
+    } */
