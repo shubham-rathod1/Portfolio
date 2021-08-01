@@ -1,10 +1,7 @@
 import React from "react";
-import { ImageList, ImageListItem } from "@material-ui/core";
-import styles from "./sections.module.css";
 import { Heading } from "./sections.module";
 import ProjectCard from "../Components/ProjectCard";
 
-// import { wrap } from "yargs";
 
 const imageData = [
   {
@@ -27,11 +24,8 @@ export default function Projects() {
       <Heading blog>Projects</Heading>
       <div style={{ display: "flex", justifyContent: "center" }}>
         {imageData.map((item) => {
-          return <ProjectCard {...item}/>;
+          return <ProjectCard {...item} />;
         })}
-
-        {/* <ProjectCard />
-        <ProjectCard /> */}
       </div>
     </div>
   );

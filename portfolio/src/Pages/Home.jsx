@@ -1,10 +1,9 @@
 import React from "react";
-import { Container, CssBaseline, styled } from "@material-ui/core";
 import Contact from "../Sections/Contact";
 import About from "../Sections/About";
 import Blog from "../Sections/Blog";
-import icon from "./icon2.svg";
 import styles from "./home.module.css";
+import { IoHome } from "react-icons/io5";
 
 import {
   Button,
@@ -18,13 +17,20 @@ import {
   Paragraph,
   AboutSection,
 } from "./pages.module";
-import Projects from "../Sections/Projects";
+import NewProjects from "../Components/Projects/NewProjects";
+import Stats from "../Components/Stats/Stats";
 
 export default function Home() {
-  const menuLinks = ["About", "Projects", "Work", "Blog", "Contact"];
+  const menuLinks = [
+    { link: "About", name: "about" },
+    { link: "Projects", name: "projects" },
+    { link: "Blog", name: "blog" },
+    { link: "Stats", name: "stats" },
+    { link: "Contact", name: "contact" },
+  ];
 
   return (
-    <div style={{ backgroundColor: "#1D1D1D", ovarflow: "hidden" }}>
+    <div style={{ backgroundColor: "#15161B", ovarflow: "hidden" }}>
       <Section>
         <MenuSection>
           <div
@@ -38,16 +44,11 @@ export default function Home() {
             }}
           >
             <div>
-              <svg
-                className={styles.svgicons}
-                xmlns="http://www.w3.org/2000/svg"
-                width="80"
-                height="80"
-                fill="#fff"
-                viewBox="-3 -3 30 30"
-              >
-                <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 17h-12v-2h12v2zm0-4h-12v-2h12v2zm0-4h-12v-2h12v2z" />
-              </svg>
+              <a style={{ textDecorationColor: "#fff" }} href="#intro">
+                <div className={styles.homeIcon}>
+                  <IoHome />
+                </div>
+              </a>
               <HTMLTEXT>
                 <i>{`<p>menu</p>`}</i>
               </HTMLTEXT>
@@ -57,7 +58,10 @@ export default function Home() {
           {menuLinks.map((item) => {
             return (
               <div>
-                <MenuLink>{item}</MenuLink>;
+                <a style={{ textDecoration: "none" }} href={`#${item.name}`}>
+                  <MenuLink>{item.link}</MenuLink>
+                </a>
+                ;
               </div>
             );
           })}
@@ -65,6 +69,7 @@ export default function Home() {
         <div
           style={{ display: "flex", flexDirection: "column", width: "100%" }}
         >
+          <a name="intro"></a>
           <div style={{ flexBasis: "90%" }}>
             <HTMLTEXT html>{`<html>`}</HTMLTEXT>
             <HTMLTEXT body>{`<body>`}</HTMLTEXT>
@@ -83,18 +88,38 @@ export default function Home() {
                 Full Stack Web Developer
               </Paragraph>
               <HTMLTEXT>{`</p>`}</HTMLTEXT>
-              <div>
-                <Button>
-                  <SpanButton>Contact me!</SpanButton>
-                </Button>
+              <div style={{ display: "flex", flexDirection: "row" }}>
+                <div style={{ margin: "0px 5px" }}>
+                  <Button>
+                    <SpanButton>Contact me!</SpanButton>
+                  </Button>
+                </div>
+                <div className={styles.resumeBtn}>
+                  <a target="_blank" href="Resume/Shubham_Rathod_resume.pdf">
+                    <Button>
+                      <SpanButton>Resume</SpanButton>
+                    </Button>
+                  </a>
+                </div>
               </div>
             </HomeSection>
             <AboutSection>
-              <About />
+              <a name="about">
+                <About />
+              </a>
             </AboutSection>
-            <Projects />
-            <Blog />
-            <Contact />
+            <a name="projects">
+              <NewProjects />
+            </a>
+            <a name="blog">
+              <Blog />
+            </a>
+            <a name="stats">
+            <Stats />
+            </a>
+            <a name="contact">
+              <Contact />
+            </a>
           </div>
         </div>
       </Section>

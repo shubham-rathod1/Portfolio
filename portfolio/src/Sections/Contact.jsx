@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import {
-  Button,
   Container,
   makeStyles,
   TextField,
   CssBaseline,
   Typography,
 } from "@material-ui/core";
-import ReactMapGL, { Marker } from "react-map-gl";
+import ReactMapGL from "react-map-gl";
 
 import styles from "./sections.module.css"
 
@@ -68,19 +67,6 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(2),
     backgroundColor: "#2B2B2B",
   },
-
-  // button css starts
-  
-  // button css ends
-
-  // root: {
-  //     '&$focused $notchedOutline': {
-  //        borderColor: 'orange',
-  //        borderBottom: "1px solid red"
-  //     }
-  //  },
-  //  focused: {},
-  //  notchedOutline: {}
 }));
 
 const initial = {

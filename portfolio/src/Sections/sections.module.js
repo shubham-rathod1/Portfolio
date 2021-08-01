@@ -4,18 +4,18 @@ import "./sections.module.css";
 
 const Heading = styled.p`
   color: ${(props) =>
-    props.about ? "#68f5d9" : props.blog ? "#68f5d9" : null};
-  font-size: ${(props) => (props.about ? "73px" : props.blog ? "73px" : null)};
-  font-weight: ${(props) => (props.about ? "400" : props.blog ? "400" : null)};
+    props.about ? "#68f5d9" : props.blog ? "#68f5d9" : props.projects ? "#68f5d9" : null};
+  font-size: ${(props) => (props.about ? "73px" : props.blog ? "73px" : props.projects ? "73px" : null)};
+  font-weight: ${(props) => (props.about ? "400" : props.blog ? "400" : props.projects ? "400" : null)};
   line-height: ${(props) =>
-    props.about ? "67px" : props.blog ? "67px" : null};
+    props.about ? "67px" : props.blog ? "67px" : props.projects ? "67px" : null};
   font-family: ${(props) =>
-    props.about ? "Oswald" : props.blog ? "Oswald" : null};
+    props.about ? "Oswald" : props.blog ? "Oswald" : props.projects ? "Oswald" : null};
   letter-spacing: ${(props) =>
-    props.about ? "0.09em" : props.blog ? "0.09em" : null};
+    props.about ? "0.09em" : props.blog ? "0.09em" : props.projects ? "0.09em" : null};
   text-align: ${(props) =>
-    props.about ? "center" : props.blog ? "center" : null};
-  margin-bottom: ${(props) => (props.about ? "2%" : props.blog ? "2%" : null)};
+    props.about ? "center" : props.blog ? "center" : props.projects ? "center" : null};
+  margin-bottom: ${(props) => (props.about ? "2%" : props.blog ? "2%" : props.projects ? "5%" : null)};
 `;
 const AboutPara = styled.p`
   color: #fff;
