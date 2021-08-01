@@ -20,7 +20,7 @@ export default function About() {
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
-              backgroundColor: "#1D1D1D",
+              backgroundColor: "#15161B",
             }}
           >
             <Heading about>About me...</Heading>
@@ -140,7 +140,7 @@ export default function About() {
             </AboutStack>
             <ContactIcons>
               <AboutPara meetme>Meet me @:</AboutPara>
-              <a
+              <a rel="noreferrer"
                 href="https://www.linkedin.com/in/shubham-rathod-297176181/"
                 target="_blank"
               >
@@ -156,7 +156,7 @@ export default function About() {
                   <path d="M 5 3 C 3.895 3 3 3.895 3 5 L 3 19 C 3 20.105 3.895 21 5 21 L 19 21 C 20.105 21 21 20.105 21 19 L 21 5 C 21 3.895 20.105 3 19 3 L 5 3 z M 5 5 L 19 5 L 19 19 L 5 19 L 5 5 z M 7.7792969 6.3164062 C 6.9222969 6.3164062 6.4082031 6.8315781 6.4082031 7.5175781 C 6.4082031 8.2035781 6.9223594 8.7167969 7.6933594 8.7167969 C 8.5503594 8.7167969 9.0644531 8.2035781 9.0644531 7.5175781 C 9.0644531 6.8315781 8.5502969 6.3164062 7.7792969 6.3164062 z M 6.4765625 10 L 6.4765625 17 L 9 17 L 9 10 L 6.4765625 10 z M 11.082031 10 L 11.082031 17 L 13.605469 17 L 13.605469 13.173828 C 13.605469 12.034828 14.418109 11.871094 14.662109 11.871094 C 14.906109 11.871094 15.558594 12.115828 15.558594 13.173828 L 15.558594 17 L 18 17 L 18 13.173828 C 18 10.976828 17.023734 10 15.802734 10 C 14.581734 10 13.930469 10.406562 13.605469 10.976562 L 13.605469 10 L 11.082031 10 z" />
                 </svg>
               </a>
-              <a href="https://dev.to/shubhamrathod1" target="_blank">
+              <a rel="noreferrer" href="https://dev.to/shubhamrathod1" target="_blank">
                 <svg
                   className={styles.contacticon}
                   fill="#fff"
@@ -168,7 +168,7 @@ export default function About() {
                   <path d="M 2 7 L 2 25 L 30 25 L 30 7 L 2 7 z M 4 9 L 28 9 L 28 23 L 4 23 L 4 9 z M 6 11 L 6 21 L 9 21 C 10.654 21 12 19.654 12 18 L 12 14 C 12 12.346 10.654 11 9 11 L 6 11 z M 16 11 C 14.897 11 14 11.897 14 13 L 14 19 C 14 20.103 14.897 21 16 21 L 18 21 L 18 19 L 16 19 L 16 17 L 18 17 L 18 15 L 16 15 L 16 13 L 18 13 L 18 11 L 16 11 z M 19.691406 11 L 21.775391 20.025391 C 21.907391 20.595391 22.415 21 23 21 C 23.585 21 24.092609 20.595391 24.224609 20.025391 L 26.308594 11 L 24.255859 11 L 23 16.439453 L 21.744141 11 L 19.691406 11 z M 8 13 L 9 13 C 9.552 13 10 13.448 10 14 L 10 18 C 10 18.552 9.552 19 9 19 L 8 19 L 8 13 z" />
                 </svg>
               </a>
-              <a href="https://github.com/shubham-rathod1" target="_blank">
+              <a rel="noreferrer" href="https://github.com/shubham-rathod1" target="_blank">
                 <svg
                   className={styles.contacticon}
                   xmlns="http://www.w3.org/2000/svg"

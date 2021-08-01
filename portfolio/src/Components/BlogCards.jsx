@@ -4,7 +4,6 @@ import {
   CardContent,
   CardMedia,
   Grid,
-  Typography,
   Card,
   CardActions,
 } from "@material-ui/core";
@@ -38,10 +37,12 @@ export default function BlogCards({ data }) {
                   </CardsText>
                 </CardContent>
                 <CardActions>
+                  <a rel="noreferrer" href={`${item.link}`} target="_blank" style={{textDecoration: "none"}}>
                   <Button size="small" color="primary">
                     {" "}
                     Read on dev...
                   </Button>
+                  </a>
                 </CardActions>
               </Card>
             </Grid>

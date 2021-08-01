@@ -7,3 +7,20 @@
 .svgicons {
   width: 80px;
 }
+.homeIcon {
+  font-size: 45px;
+  color: #fff;
+  text-align: center;
+  border: 3px solid white;
+  border-radius: 999px;
+  padding-top: 10px;
+}
+.homeIcon:hover {
+  color: #53c6aa;
+  border-color: #53c6aa;
+  cursor: pointer;
+}
+.resumeBtn {
+  margin-left: 20px;
+}
+
