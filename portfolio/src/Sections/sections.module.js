@@ -14,7 +14,7 @@ const Heading = styled.p`
   letter-spacing: ${(props) =>
     props.about ? "0.09em" : props.blog ? "0.09em" : props.projects ? "0.09em" : null};
   text-align: ${(props) =>
-    props.about ? "center" : props.blog ? "center" : props.projects ? "center" : null};
+    props.about ? "left" : props.blog ? "center" : props.projects ? "center" : null};
   margin-bottom: ${(props) => (props.about ? "2%" : props.blog ? "2%" : props.projects ? "5%" : null)};
 `;
 const AboutPara = styled.p`
@@ -23,21 +23,22 @@ const AboutPara = styled.p`
   line-height: 24px;
   font-family: sans-serif;
   font-weight: 400;
-  padding: ${(params) => (params.meetme ? "0% 0%" : "0% 20%")};
+  padding: ${(params) => (params.meetme ? "0% 0%" : params.about ? "0% 20% 0% 0%" : null)};
   /* text-align: left; */
-  text-align: center;
+  text-align: left;
 `;
 const AboutStack = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
   margin: 2% 0%;
 `;
 const ContactIcons = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
+  /* padding-top: 10%; */
 `;
 const CardsText = styled.p`
   font-family: ${(props) =>

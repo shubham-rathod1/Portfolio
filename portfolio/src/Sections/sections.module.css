@@ -67,3 +67,50 @@
   opacity: 0.2;
   z-index: 2;
 }
+.form {
+  border: 1px solid white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.fields {
+  margin: 20px;
+  background-color: #f5f1f1;
+  padding: 10px;
+  border-radius: 5px;
+}
+.name_and_email {
+  display: flex;
+  flex-direction: row;
+}
+.name {
+  flex-basis: 50%;
+  margin: 20px;
+  background-color: #f5f1f1;
+  padding: 10px;
+  border-radius: 5px;
+}
+.email {
+  flex-basis: 50%;
+  margin: 20px;
+  background-color: #f5f1f1;
+  padding: 10px;
+  border-radius: 5px;
+}
+.email::placeholder {
+  color: #353535;
+  font-size: 15px;
+  font-weight: 600;
+}
+.name::placeholder {
+  color: #353535;
+  font-size: 14px;
+  font-weight: 600;
+}
+.fields::placeholder {
+  color: #353535;
+  font-size: 14px;
+  font-weight: 600;
+}
