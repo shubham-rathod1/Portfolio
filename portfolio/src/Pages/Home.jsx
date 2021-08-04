@@ -78,7 +78,7 @@ export default function Home() {
               <Heading>
                 Hi,
                 <br />
-                I'm Shubham,
+                I'm Shubham Rathod,
                 <br />
                 Web Developer
               </Heading>{" "}
@@ -90,9 +90,10 @@ export default function Home() {
               <HTMLTEXT>{`</p>`}</HTMLTEXT>
               <div style={{ display: "flex", flexDirection: "row" }}>
                 <div style={{ margin: "0px 5px" }}>
-                  <Button>
+                  <a href="#contact"><Button>
                     <SpanButton>Contact me!</SpanButton>
                   </Button>
+                  </a>
                 </div>
                 <div className={styles.resumeBtn}>
                   <a target="_blank" href="Resume/Shubham_Rathod_resume.pdf">

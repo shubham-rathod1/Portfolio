@@ -1,22 +1,27 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+
 import {
   Container,
   makeStyles,
-  TextField,
+  // TextField,
   CssBaseline,
   Typography,
 } from "@material-ui/core";
 import ReactMapGL from "react-map-gl";
+import emailjs from "emailjs-com";
+import "react-toastify/dist/ReactToastify.css";
 
-import styles from "./sections.module.css"
+import styles from "./sections.module.css";
+import { Grid } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   outerLayout: {
     backgroundColor: "#1D1D1D",
-    height: "675px",
+    height: "100vh",
     display: "flex",
-    margin: "0px",
-    padding: "0px",
+    // margin: "0px",
+    // padding: "0px",
   },
   container: {
     display: "flex",
@@ -59,37 +64,32 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: theme.spacing(8),
     marginRight: theme.spacing(8),
   },
-  name_and_email: {
-    display: "flex",
-    flexDirection: "row",
-  },
-  fields: {
-    margin: theme.spacing(2),
-    backgroundColor: "#2B2B2B",
-  },
 }));
 
-const initial = {
-  name: "",
-  email: "",
-  Contact: "",
-  message: "",
-};
 export default function Contact() {
-  const [inp, setInp] = useState(initial);
-  const [submit, setSubmit] = useState([]);
+  const success = () => toast.dark("Successfully Sent");
+  const failure = () => toast.error("Something went wrong");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmit([...submit, inp]);
-    setInp("");
-  };
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    let payload = {
-      [name]: value,
-    };
-    setInp({ ...inp, ...payload });
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        e.target,
+        process.env.REACT_APP_USER_ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          success();
+        },
+        (error) => {
+          console.log(error.text);
+          failure();
+        }
+      );
+    e.target.reset();
   };
 
   const [viewport, setViewport] = React.useState({
@@ -101,79 +101,75 @@ export default function Contact() {
   const classes = useStyles();
 
   return (
-    <div className={classes.outerLayout}>
-      <Container maxWidth="false" className={classes.container}>
-        <CssBaseline />
-        <div className={classes.contacSection}>
-          <Typography className={classes.title}>Contact me</Typography>
-          <Typography className={classes.paragraph}>
-            I’m interested in freelance opportunities – especially ambitious or
-            large projects. However, if you have other request or question,
-            don’t hesitate to use the form.
-          </Typography>
+    <Grid className={classes.outerLayout} container>
+      <Grid
+        item
+        xs={12}
+        sm={12}
+        md={6}
+        lg={6}
+        className={classes.contacSection}
+      >
+        <Typography className={classes.title}>Contact me</Typography>
+        <Typography className={classes.paragraph}>
+          I’m interested in projects or opportunities – especially ambitious or
+          large projects. However, if you have other request or question, don’t
+          hesitate to use the form.
+        </Typography>
 
-          <div>
-            <form className={classes.form}>
-              <div className={classes.name_and_email}>
-                <TextField
-                  required
-                  className={classes.fields}
-                  label="Your Name"
-                  name="name"
-                  value={inp.name}
-                  onChange={handleChange}
-                />
-                <TextField
-                  required
-                  className={classes.fields}
-                  label="Email"
-                  name="email"
-                  value={inp.email}
-                  onChange={handleChange}
-                />
-              </div>
-              <TextField
-                type="number"
+        <div>
+          <form className={classes.form} onSubmit={handleSubmit}>
+            <div className={styles.name_and_email}>
+              <input
                 required
-                className={classes.fields}
-                label="contact"
-                name="contact"
-                value={inp.contact}
-                onChange={handleChange}
+                className={styles.name}
+                placeholder="Your Name"
+                name="name"
               />
-              <TextField
+              <input
                 required
-                className={classes.fields}
-                multiline
-                rows={4}
-                label="Message"
-                name="message"
-                value={inp.message}
-                onChange={handleChange}
+                className={styles.email}
+                placeholder="Email"
+                name="email"
               />
-              <button
-                disableRipple="true"
-                className={`${styles.fields} ${styles.btn}`}
-                onClick={handleSubmit}
-              >
-                <span className={styles.btnText}>Submit</span>
-              </button>
-            </form>
-          </div>
+            </div>
+            <input
+              type="number"
+              required
+              className={styles.fields}
+              placeholder="contact"
+              name="contact"
+            />
+            <input
+              required
+              className={styles.fields}
+              multiline
+              rows="4"
+              placeholder="Message"
+              name="message"
+            />
+            <button
+              disableRipple="true"
+              className={`${classes.fields} ${styles.btn}`}
+            >
+              <span className={styles.btnText}>Submit</span>
+            </button>
+            <ToastContainer />
+          </form>
         </div>
+      </Grid>
 
-        <div className={classes.mapSection}>
-          <ReactMapGL
-            {...viewport}
-            width="100%"
-            height="100%"
-            onViewportChange={(viewport) => setViewport(viewport)}
-            mapboxApiAccessToken={
-              "pk.eyJ1Ijoic2h1YmhhbS0xOTk1IiwiYSI6ImNrcXlhdzQwZjB5aHYyeXF5ZjJhdnhrcGEifQ.EcpR8DQU2Q8sBcT0RnNEaQ"
-            }
-          ></ReactMapGL>
-        </div>
-      </Container>
-    </div>
+      <Grid item xs={12} sm={12} md={6} lg={6} className={classes.mapSection}>
+        <ReactMapGL
+          {...viewport}
+          width="100%"
+          height="100%"
+          onViewportChange={(viewport) => setViewport(viewport)}
+          mapboxApiAccessToken={
+            "pk.eyJ1Ijoic2h1YmhhbS0xOTk1IiwiYSI6ImNrcXlhdzQwZjB5aHYyeXF5ZjJhdnhrcGEifQ.EcpR8DQU2Q8sBcT0RnNEaQ"
+          }
+        ></ReactMapGL>
+      </Grid>
+    </Grid>
   );
 }
