@@ -1,13 +1,7 @@
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 
-import {
-  Container,
-  makeStyles,
-  // TextField,
-  CssBaseline,
-  Typography,
-} from "@material-ui/core";
+import { makeStyles, Typography } from "@material-ui/core";
 import ReactMapGL from "react-map-gl";
 import emailjs from "emailjs-com";
 import "react-toastify/dist/ReactToastify.css";
@@ -20,8 +14,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#1D1D1D",
     height: "100vh",
     display: "flex",
-    // margin: "0px",
-    // padding: "0px",
   },
   container: {
     display: "flex",
@@ -48,14 +40,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(7),
     paddingRight: theme.spacing(5),
   },
-  paragraph: {
-    color: "#fff",
-    paddingLeft: theme.spacing(8),
-    paddingRight: theme.spacing(5),
-    marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(3),
-    fontSize: "15px",
-  },
+
   form: {
     border: "1px solid white",
     borderRadius: theme.shape.borderRadius,
@@ -111,7 +96,7 @@ export default function Contact() {
         className={classes.contacSection}
       >
         <Typography className={classes.title}>Contact me</Typography>
-        <Typography className={classes.paragraph}>
+        <Typography className={styles.paragraph}>
           I’m interested in projects or opportunities – especially ambitious or
           large projects. However, if you have other request or question, don’t
           hesitate to use the form.

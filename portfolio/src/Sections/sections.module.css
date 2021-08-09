@@ -114,3 +114,11 @@
   font-size: 14px;
   font-weight: 600;
 }
+.paragraph {
+  color: #fff;
+  padding-left: 63px;
+  padding-right: 63px;
+  padding-top: 10px;
+  padding-bottom: 35px;
+  font-size: 15px;
+}
