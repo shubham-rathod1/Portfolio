@@ -8,9 +8,14 @@ const Button = styled.button`
   position: relative;
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid #53c6aa;
-  font-size: 22px;
+  /* font-size: 22px; */
   padding: 10px 70px;
-  
+
+  @media only screen and (max-width: 768px) {
+    font-size: 18px;
+    margin: 20px auto;
+    padding: 8px 40px;
+  }
 
   &::before {
     transition: all 0.4s cubic-bezier(0.68, -0.16, 0.2, 1.1);
@@ -25,6 +30,7 @@ const Button = styled.button`
   &:hover::before {
     background: #53c6aa;
     width: 100%;
+    cursor: pointer;
   }
 `;
 
@@ -33,6 +39,7 @@ const SpanButton = styled.span`
   mix-blend-mode: hard-light;
   &:hover {
     color: black;
+    cursor: pointer;
   }
 `;
 
@@ -55,8 +62,9 @@ const HTMLTEXT = styled.p`
   margin-bottom: 0px;
   &:hover {
     color: #53c6aa;
-  };
-  margin-left: ${props => props.html ? "3.7%" : props.body ? "5%" : props.h1 ? "5.8%" : null};
+  }
+  margin-left: ${(props) =>
+    props.html ? "3.7%" : props.body ? "5%" : props.h1 ? "5.8%" : null};
 `;
 const MenuLink = styled.li`
   text-align: center;
@@ -78,8 +86,12 @@ const HomeSection = styled.div`
   padding-left: 6%;
 `;
 const AboutSection = styled.div`
-  padding-left: 6%;
-`
+  margin-left: 6%;
+  @media only screen and (max-width: 768px) {
+    margin-left: 0%;
+    width: 100%;
+  }
+`;
 const Heading = styled.p`
   font-size: 100px;
   font-weight: 600;
@@ -89,15 +101,22 @@ const Heading = styled.p`
   padding: 0px;
   margin-bottom: 1.5%;
   margin-top: 0px;
+  @media only screen and (max-width: 768px) {
+    font-size: 60px;
+    /* font-weight: 500; */
+    line-height: 60px;
+  }
 `;
 const Paragraph = styled.p`
   margin: 5px;
   color: white;
   font-family: sans-serif;
   font-size: 18px;
-  letter-spacing: ${props => props.fullstack ? "0.3em" : null};
-
-`
+  letter-spacing: ${(props) => (props.fullstack ? "0.3em" : null)};
+  @media only screen and (max-width: 768px) {
+    font-size: ${(props) => (props.fullstack ? "14px" : null)};
+  }
+`;
 export {
   Button,
   Section,
@@ -108,5 +127,5 @@ export {
   Heading,
   SpanButton,
   Paragraph,
-  AboutSection
+  AboutSection,
 };

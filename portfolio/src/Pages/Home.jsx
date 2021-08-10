@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <div style={{ backgroundColor: "#15161B", ovarflow: "hidden" }}>
       <Section>
-        <MenuSection>
+        <MenuSection className={styles.menusection}>
           <div
             style={{
               height: "27%",
@@ -61,14 +61,12 @@ export default function Home() {
                 <a style={{ textDecoration: "none" }} href={`#${item.name}`}>
                   <MenuLink>{item.link}</MenuLink>
                 </a>
-                ;
+                <br />
               </div>
             );
           })}
         </MenuSection>
-        <div
-          style={{ display: "flex", flexDirection: "column", width: "100%" }}
-        >
+        <div className={styles.introSection}>
           <a name="intro"></a>
           <div style={{ flexBasis: "90%" }}>
             <HTMLTEXT html>{`<html>`}</HTMLTEXT>
@@ -88,11 +86,12 @@ export default function Home() {
                 Full Stack Web Developer
               </Paragraph>
               <HTMLTEXT>{`</p>`}</HTMLTEXT>
-              <div style={{ display: "flex", flexDirection: "row" }}>
+              <div className={styles.introBtns}>
                 <div style={{ margin: "0px 5px" }}>
-                  <a href="#contact"><Button>
-                    <SpanButton>Contact me!</SpanButton>
-                  </Button>
+                  <a href="#contact">
+                    <Button>
+                      <SpanButton>Contact me!</SpanButton>
+                    </Button>
                   </a>
                 </div>
                 <div className={styles.resumeBtn}>
@@ -116,7 +115,7 @@ export default function Home() {
               <Blog />
             </a>
             <a name="stats">
-            <Stats />
+              <Stats />
             </a>
             <a name="contact">
               <Contact />
