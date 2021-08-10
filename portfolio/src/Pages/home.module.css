@@ -23,4 +23,21 @@
 .resumeBtn {
   margin-left: 20px;
 }
-
+.introSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.introBtns {
+  display: flex;
+  flex-direction: row;
+}
+@media only screen and (max-width: 768px) {
+  .menusection {
+    display: none;
+  }
+  .introBtns {
+    /* flex-direction: column; */
+    align-items: center;
+  }
+}

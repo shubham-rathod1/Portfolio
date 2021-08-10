@@ -14,27 +14,9 @@ export default function About() {
     <div>
       <Grid container>
         <Grid item xs={12} sm={12} md={4} lg={4}>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              height: "100%",
-              flexDirection: "column",
-              marginTop: "11%",
-            }}
-          >
-            <div
-              style={{
-                backgroundImage: `url("Project_images/my_profile.jpg")`,
-                height: "300px",
-                width: "300px",
-                backgroundSize: "cover",
-                backgroundPosition: "center center",
-                borderRadius: "900px",
-              }}
-            ></div>
-            <ContactIcons>
+          <div className={styles.picContainer}>
+            <div className={styles.profileImg}></div>
+            <ContactIcons className={styles.meetmeContainer}>
               <AboutPara meetme>Meet me @:</AboutPara>
               <a
                 rel="noreferrer"
@@ -114,16 +96,7 @@ export default function About() {
           </div>
         </Grid>
         <Grid item xs={12} sm={12} md={8} lg={8}>
-          <div
-            style={{
-              height: "70vh",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              backgroundColor: "#15161B",
-              paddingLeft: "15%",
-            }}
-          >
+          <div className={styles.about}>
             <Heading about>About me...</Heading>
             <AboutPara about>
               Full Stack Developer with experience in designing, developing, and
