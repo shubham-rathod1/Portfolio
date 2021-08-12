@@ -11,7 +11,7 @@ import styles from "./sections.module.css";
 
 export default function About() {
   return (
-    <div>
+    <div className={styles.outerContainer}>
       <Grid container>
         <Grid item xs={12} sm={12} md={4} lg={4}>
           <div className={styles.picContainer}>
@@ -108,7 +108,7 @@ export default function About() {
               encouraging atmosphere handle challenging roles as Full Stack
               Developer.
             </AboutPara>
-            <AboutStack>
+            <AboutStack className={styles.aboutStack}>
               <Card className={styles.cards}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

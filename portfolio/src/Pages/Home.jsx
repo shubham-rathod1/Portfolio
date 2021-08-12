@@ -15,7 +15,7 @@ import {
   Heading,
   SpanButton,
   Paragraph,
-  AboutSection,
+  // AboutSection,
 } from "./pages.module";
 import NewProjects from "../Components/Projects/NewProjects";
 import Stats from "../Components/Stats/Stats";
@@ -103,11 +103,11 @@ export default function Home() {
                 </div>
               </div>
             </HomeSection>
-            <AboutSection>
+            {/* <AboutSection> */}
               <a name="about">
                 <About />
               </a>
-            </AboutSection>
+            {/* </AboutSection> */}
             <a name="projects">
               <NewProjects />
             </a>

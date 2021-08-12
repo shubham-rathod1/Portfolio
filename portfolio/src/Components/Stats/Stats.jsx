@@ -13,6 +13,7 @@ import {
 const Container = styled.div`
   width: 100%;
   padding: 40px 0px;
+  margin: 5% 0% 10% 0%;
 `;
 
 const Stats = () => {

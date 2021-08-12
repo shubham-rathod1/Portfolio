@@ -10,6 +10,8 @@ const Heading = styled.p`
       ? "#68f5d9"
       : props.projects
       ? "#68f5d9"
+      : props.contact
+      ? "#68f5d9"
       : null};
   font-size: ${(props) =>
     props.about
@@ -18,15 +20,27 @@ const Heading = styled.p`
       ? "73px"
       : props.projects
       ? "73px"
+      : props.contact
+      ? "73px"
       : null};
   font-weight: ${(props) =>
-    props.about ? "400" : props.blog ? "400" : props.projects ? "400" : null};
+    props.about
+      ? "400"
+      : props.blog
+      ? "400"
+      : props.projects
+      ? "400"
+      : props.contact
+      ? "400"
+      : null};
   line-height: ${(props) =>
     props.about
       ? "67px"
       : props.blog
       ? "67px"
       : props.projects
+      ? "67px"
+      : props.contact
       ? "67px"
       : null};
   font-family: ${(props) =>
@@ -36,6 +50,8 @@ const Heading = styled.p`
       ? "Oswald"
       : props.projects
       ? "Oswald"
+      : props.contact
+      ? "Oswald"
       : null};
   letter-spacing: ${(props) =>
     props.about
@@ -43,6 +59,8 @@ const Heading = styled.p`
       : props.blog
       ? "0.09em"
       : props.projects
+      ? "0.09em"
+      : props.contact
       ? "0.09em"
       : null};
   text-align: ${(props) =>
@@ -52,12 +70,34 @@ const Heading = styled.p`
       ? "center"
       : props.projects
       ? "center"
+      : props.contact
+      ? "left"
       : null};
   margin-bottom: ${(props) =>
-    props.about ? "2%" : props.blog ? "2%" : props.projects ? "5%" : null};
+    props.about
+      ? "2%"
+      : props.blog
+      ? "2%"
+      : props.projects
+      ? "5%"
+      : props.contact
+      ? "2%"
+      : null};
+      margin-left: ${props => props.contact ? "9%" : null};
+      margin-top: ${props => props.contact ? "4%" : null};
   @media only screen and (max-width: 768px) {
-    font-size: ${(props) => (props.about ? "48px" : null)};
-    text-align: ${(props) => (props.about ? "center" : null)};
+    font-size: ${(props) =>
+      props.about
+        ? "48px"
+        : props.contact
+        ? "48px"
+        : props.projects
+        ? "48px"
+        : props.blog
+        ? "48px"
+        : null};
+    text-align: ${(props) =>
+      props.about ? "center" : props.contact ? "center" : null};
   }
 `;
 const AboutPara = styled.p`
@@ -72,6 +112,7 @@ const AboutPara = styled.p`
   @media only screen and (max-width: 768px) {
     font-size: ${(props) => (props.about ? "14px" : null)};
     text-align: ${(props) => (props.about ? "center" : null)};
+    padding: ${(props) => (props.about ? "0% 10%" : null)};
   }
 `;
 const AboutStack = styled.div`

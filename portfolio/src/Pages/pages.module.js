@@ -85,13 +85,7 @@ const HomeSection = styled.div`
   align-items: left;
   padding-left: 6%;
 `;
-const AboutSection = styled.div`
-  margin-left: 6%;
-  @media only screen and (max-width: 768px) {
-    margin-left: 0%;
-    width: 100%;
-  }
-`;
+
 const Heading = styled.p`
   font-size: 100px;
   font-weight: 600;
@@ -104,7 +98,7 @@ const Heading = styled.p`
   @media only screen and (max-width: 768px) {
     font-size: 60px;
     /* font-weight: 500; */
-    line-height: 60px;
+    line-height: 80px;
   }
 `;
 const Paragraph = styled.p`
@@ -127,5 +121,4 @@ export {
   Heading,
   SpanButton,
   Paragraph,
-  AboutSection,
 };

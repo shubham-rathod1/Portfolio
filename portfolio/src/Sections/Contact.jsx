@@ -7,48 +7,12 @@ import emailjs from "emailjs-com";
 import "react-toastify/dist/ReactToastify.css";
 
 import styles from "./sections.module.css";
+import {Heading} from "./sections.module" 
 import { Grid } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-  outerLayout: {
-    backgroundColor: "#1D1D1D",
-    height: "100vh",
-    display: "flex",
-  },
-  container: {
-    display: "flex",
-    margin: "0px",
-    padding: "0px",
-  },
-  contacSection: {
-    display: "flex",
-    flexBasis: "50%",
-    flexDirection: "column",
-    alignContent: "center",
-    justifyContent: "center",
-    margin: "0px",
-  },
-  mapSection: {
-    display: "flex",
-    flexBasis: "50%",
-    width: "100%",
-  },
-  title: {
-    color: "#68F5D9",
-    fontSize: "60px",
-    fontWeight: "700",
-    paddingLeft: theme.spacing(7),
-    paddingRight: theme.spacing(5),
-  },
-
-  form: {
-    border: "1px solid white",
-    borderRadius: theme.shape.borderRadius,
-    display: "flex",
-    flexDirection: "column",
-    marginLeft: theme.spacing(8),
-    marginRight: theme.spacing(8),
-  },
+  
+ 
 }));
 
 export default function Contact() {
@@ -86,16 +50,9 @@ export default function Contact() {
   const classes = useStyles();
 
   return (
-    <Grid className={classes.outerLayout} container>
-      <Grid
-        item
-        xs={12}
-        sm={12}
-        md={6}
-        lg={6}
-        className={classes.contacSection}
-      >
-        <Typography className={classes.title}>Contact me</Typography>
+    <Grid className={styles.outerLayout} container>
+      <Grid item xs={12} sm={12} md={6} lg={6} className={styles.contacSection}>
+        <Heading contact>Contact me</Heading>
         <Typography className={styles.paragraph}>
           I’m interested in projects or opportunities – especially ambitious or
           large projects. However, if you have other request or question, don’t
@@ -103,7 +60,7 @@ export default function Contact() {
         </Typography>
 
         <div>
-          <form className={classes.form} onSubmit={handleSubmit}>
+          <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.name_and_email}>
               <input
                 required
@@ -125,8 +82,9 @@ export default function Contact() {
               placeholder="contact"
               name="contact"
             />
-            <input
+            <textarea
               required
+              type="textarea"
               className={styles.fields}
               multiline
               rows="4"
@@ -144,7 +102,7 @@ export default function Contact() {
         </div>
       </Grid>
 
-      <Grid item xs={12} sm={12} md={6} lg={6} className={classes.mapSection}>
+      <Grid item xs={12} sm={12} md={6} lg={6} className={styles.mapSection}>
         <ReactMapGL
           {...viewport}
           width="100%"
