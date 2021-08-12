@@ -67,16 +67,8 @@
   opacity: 0.2;
   z-index: 2;
 }
-.form {
-  border: 1px solid white;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  margin-left: 5%;
-  margin-right: 5%;
-}
 .fields {
-  margin: 20px;
+  margin: 10px 20px;
   background-color: #f5f1f1;
   padding: 10px;
   border-radius: 5px;
@@ -84,6 +76,7 @@
 .name_and_email {
   display: flex;
   flex-direction: row;
+  margin-bottom: 0px;
 }
 .name {
   flex-basis: 50%;
@@ -146,6 +139,36 @@
   background-color: #15161b;
   padding-left: 15%;
 }
+.outerContainer {
+  margin-left: 6%;
+}
+.outerLayout {
+  background-color: #15161B;
+  height: auto;
+  display: flex;
+  flex-direction: "row";
+}
+.contacSection {
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin: 0px;
+}
+.mapSection {
+  display: flex;
+  flex-basis: 50%;
+  width: 100%;
+}
+.form {
+  border: 1px solid white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 11% 6% 11%;
+}
+
 @media only screen and (max-width: 768px) {
   .profileImg {
     height: 220px;
@@ -153,5 +176,22 @@
   }
   .meetmeContainer {
     margin-bottom: 50px;
+  }
+  .outerContainer {
+    margin-left: 0%;
+  }
+  .about {
+    padding-left: 0px;
+    text-align: center;
+  }
+  .name_and_email {
+    flex-direction: column;
+    /* margin-bottom: 0px; */
+  }
+  .form {
+    margin-bottom: 10%;
+  }
+  .mapSection {
+   display: none;
   }
 }
