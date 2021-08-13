@@ -10,6 +10,12 @@ import styles from "./sections.module.css";
 import {Heading} from "./sections.module" 
 import { Grid } from "@material-ui/core";
 
+import 'mapbox-gl/dist/mapbox-gl.css';
+import mapboxgl from 'mapbox-gl';
+// @ts-ignore
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
+
 const useStyles = makeStyles((theme) => ({
   
  
