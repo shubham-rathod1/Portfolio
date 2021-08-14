@@ -20,29 +20,36 @@ export default function BlogCards({ data }) {
             <Grid item sm={6} xs={12} md={6} lg={6}>
               <Card>
                 <CardMedia className={styles.media} image={item.image} />
-                <CardContent>
-                  <CardsText title
-                    className={styles.blogTypo}
-                    variant="h4"
-                    gutterBottom
-                  >
-                    {item.title}
-                  </CardsText>
-                  <CardsText para
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    {item.para}{" "}
-                  </CardsText>
-                </CardContent>
+                <a
+                  rel="noreferrer"
+                  href={`${item.link}`}
+                  target="_blank"
+                  style={{ textDecoration: "none" }}
+                >
+                  <CardContent>
+                    <CardsText
+                      title
+                      className={styles.blogTypo}
+                      variant="h4"
+                      gutterBottom
+                    >
+                      {item.title}
+                    </CardsText>
+                    <CardsText
+                      para
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
+                    >
+                      {item.para}{" "}
+                    </CardsText>
+                  </CardContent>
+                </a>
                 <CardActions>
-                  <a rel="noreferrer" href={`${item.link}`} target="_blank" style={{textDecoration: "none"}}>
                   <Button size="small" color="primary">
                     {" "}
                     Read on dev...
                   </Button>
-                  </a>
                 </CardActions>
               </Card>
             </Grid>
