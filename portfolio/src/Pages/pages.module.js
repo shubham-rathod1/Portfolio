@@ -84,6 +84,10 @@ const HomeSection = styled.div`
   flex-direction: column;
   align-items: left;
   padding-left: 6%;
+  @media only screen and (min-width: 768px) {
+    position: absolute;
+    top: 1%;
+  }
 `;
 
 const Heading = styled.p`

@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaNodeJs } from "react-icons/fa";
+import { FaGithub, FaNodeJs, FaLink } from "react-icons/fa";
 import styled from "styled-components";
 
 import {
@@ -31,7 +31,7 @@ const Projects = () => {
       image: "Project_images/revvnew.png",
       project_desc:
         "Revv is a self drive car rental service that provides you with all the privacy, without the hassles of owning and maintaining one.",
-      deploy_link: "https://paytmbus.vercel.app/",
+      deploy_link: "https://revvcars.netlify.app/",
       repo_link: "https://github.com/avinashkumarsinha007/revv_clone",
       tech_stack: [
         <FaReact />,
@@ -48,7 +48,7 @@ const Projects = () => {
       image: "Project_images/getharvest.png",
       project_desc:
         "Harvest is modern time tracking software – for less effort, more joy, and improved profitability.",
-      deploy_link: "https://indeed.vercel.app/",
+      deploy_link: "https://harvestclone.netlify.app/#/",
       repo_link: "https://github.com/pujarianil4/getharvest_clone",
       tech_stack: [<FaReact />, <SiRedux />, <FaJs />, <FaHtml5 />, <FaCss3 />],
     },
@@ -59,7 +59,7 @@ const Projects = () => {
         "Project_images/united_by_blue.png",
       project_desc:
         "Eco-Friendly E-commerce Fashion Brand. Removes 1 pound of trash from ocean for every single product purchase.",
-      deploy_link: "https://netflix-psi-murex.vercel.app/",
+      deploy_link: "#",
       repo_link: "https://github.com/shubham-rathod1/united_by_blue_clone",
       tech_stack: [<FaReact />,<SiRedux />, <FaJs />, <FaHtml5 />, <FaCss3 />],
     },
@@ -80,7 +80,7 @@ const Projects = () => {
       image: "Project_images/fathom_health.png",
       project_desc:
         "AI built for medical coding, combined with human infrastructure to maximize speed and accuracy.",
-      deploy_link: "#",
+      deploy_link: "https://fathomhealthclone.netlify.app/",
       repo_link: "https://github.com/shubham-rathod1/FathomHealth_Project",
       tech_stack: [<FaJs />, <FaHtml5 />, <FaCss3 />],
     },
@@ -137,13 +137,13 @@ const Projects = () => {
                   >
                     <FaGithub /> Code
                   </A>
-                  {/* <A
+                  <A
                     href={item.deploy_link}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaLink /> Demo
-                  </A> */}
+                  </A>
                 </div>
               </ServiceBox>
             </BoxDiv>

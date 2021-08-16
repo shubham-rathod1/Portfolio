@@ -5,6 +5,9 @@ import Blog from "../Sections/Blog";
 import styles from "./home.module.css";
 import { IoHome } from "react-icons/io5";
 
+import Particles from "react-particles-js";
+import particleConfig from "../Particle_Config/particle-config";
+
 import {
   Button,
   MenuSection,
@@ -15,7 +18,6 @@ import {
   Heading,
   SpanButton,
   Paragraph,
-  // AboutSection,
 } from "./pages.module";
 import NewProjects from "../Components/Projects/NewProjects";
 import Stats from "../Components/Stats/Stats";
@@ -69,10 +71,14 @@ export default function Home() {
         <div className={styles.introSection}>
           <a name="intro"></a>
           <div style={{ flexBasis: "90%" }}>
-            <HTMLTEXT html>{`<html>`}</HTMLTEXT>
-            <HTMLTEXT body>{`<body>`}</HTMLTEXT>
-            <HTMLTEXT h1>{`<h1>`}</HTMLTEXT>
+            <Particles
+              params={particleConfig}
+              className={styles.particleEffect}
+            />
             <HomeSection>
+              <HTMLTEXT html>{`<html>`}</HTMLTEXT>
+              <HTMLTEXT body>{`<body>`}</HTMLTEXT>
+              <HTMLTEXT h1>{`<h1>`}</HTMLTEXT>
               <Heading>
                 Hi,
                 <br />
@@ -103,10 +109,9 @@ export default function Home() {
                 </div>
               </div>
             </HomeSection>
-            {/* <AboutSection> */}
-              <a name="about">
-                <About />
-              </a>
+            <a name="about">
+              <About />
+            </a>
             {/* </AboutSection> */}
             <a name="projects">
               <NewProjects />
