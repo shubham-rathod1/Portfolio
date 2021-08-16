@@ -32,6 +32,10 @@
   display: flex;
   flex-direction: row;
 }
+.particleEffect {
+  height: 100vh;
+}
+
 @media only screen and (max-width: 768px) {
   .menusection {
     display: none;
@@ -39,5 +43,8 @@
   .introBtns {
     /* flex-direction: column; */
     align-items: center;
+  }
+  .particleEffect {
+    display: none;
   }
 }
