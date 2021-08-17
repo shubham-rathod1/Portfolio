@@ -110,7 +110,6 @@ const Projects = () => {
                     {item.project_name}
                   </ServiceBoxHeader>
                   <ServiceBoxP>{item.project_desc}</ServiceBoxP>
-                  {/* <a href="">Read more</a> */}
                   <div
                     style={{
                       margin: "20px",

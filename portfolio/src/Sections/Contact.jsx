@@ -1,7 +1,7 @@
 import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 
-import { makeStyles, Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import ReactMapGL from "react-map-gl";
 import emailjs from "emailjs-com";
 import "react-toastify/dist/ReactToastify.css";
@@ -10,16 +10,16 @@ import styles from "./sections.module.css";
 import {Heading} from "./sections.module" 
 import { Grid } from "@material-ui/core";
 
+import {AiOutlineLinkedin, AiOutlineGithub, AiOutlineMail} from "react-icons/ai"
+
+// mapbox imports
 import 'mapbox-gl/dist/mapbox-gl.css';
 import mapboxgl from 'mapbox-gl';
 // @ts-ignore
 // eslint-disable-next-line import/no-webpack-loader-syntax
 mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
-const useStyles = makeStyles((theme) => ({
-  
- 
-}));
+// import ends here
 
 export default function Contact() {
   const success = () => toast.dark("Successfully Sent");
@@ -52,8 +52,6 @@ export default function Contact() {
     longitude: 72.877426,
     zoom: 10,
   });
-
-  const classes = useStyles();
 
   return (
     <Grid className={styles.outerLayout} container>
@@ -99,12 +97,18 @@ export default function Contact() {
             />
             <button
               disableRipple="true"
-              className={`${classes.fields} ${styles.btn}`}
+              className={` ${styles.btn}`}
             >
               <span className={styles.btnText}>Submit</span>
             </button>
             <ToastContainer />
           </form>
+          <div style = {{display: "flex", justifyContent: "center"}}>
+            <p style = {{color: "white", margin: "0% 1% 2% 0%"}}>contact me @</p>
+            <a className = {styles.contactIcons} href="https://www.linkedin.com/in/shubham-rathod-297176181/" target="_blank" rel="noopener noreferrer"><AiOutlineLinkedin /></a>
+            <a className = {styles.contactIcons} href="https://github.com/shubham-rathod1" target="_blank" rel="noopener noreferrer"><AiOutlineGithub /></a>
+            <a className = {styles.contactIcons} href="https://mailto:shubhamrathod.sr1@gmail.com" target="_blank" rel="noopener noreferrer"><AiOutlineMail /></a>
+          </div>
         </div>
       </Grid>
 
