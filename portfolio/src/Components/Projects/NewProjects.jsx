@@ -49,7 +49,7 @@ const Projects = () => {
       project_desc:
         "Harvest is modern time tracking software – for less effort, more joy, and improved profitability.",
       deploy_link: "https://harvestclone.netlify.app/#/",
-      repo_link: "https://github.com/pujarianil4/getharvest_clone",
+      repo_link: "https://github.com/shubham-rathod1/getharvest_clone",
       tech_stack: [<FaReact />, <SiRedux />, <FaJs />, <FaHtml5 />, <FaCss3 />],
     },
     {
@@ -71,7 +71,7 @@ const Projects = () => {
       project_desc:
         "Calendly is a web application for scheduling appointments, meetings, and events.Making planning simpler.",
       deploy_link: "https://calendly-clone-nu.vercel.app/",
-      repo_link: "https://github.com/ajmalmiyan/calendly-clone",
+      repo_link: "https://github.com/shubham-rathod1/Calendly-Clone",
       tech_stack: [<FaJs />, <FaHtml5 />, <FaCss3 />],
     },
     {
