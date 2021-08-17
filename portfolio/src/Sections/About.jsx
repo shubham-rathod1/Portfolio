@@ -105,7 +105,7 @@ export default function About() {
               <br />
               Always keen on a solution-oriented approach to problems. Strongly
               believe that everything can be solved. Seeking to work in an
-              encouraging atmosphere handle challenging roles as Full Stack
+              encouraging atmosphere and handle challenging roles as Full Stack
               Developer.
             </AboutPara>
             <AboutStack className={styles.aboutStack}>

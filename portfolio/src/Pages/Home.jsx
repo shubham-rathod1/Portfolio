@@ -69,12 +69,12 @@ export default function Home() {
           })}
         </MenuSection>
         <div className={styles.introSection}>
-          <a name="intro"></a>
           <div style={{ flexBasis: "90%" }}>
+          <a href={() => false} name="intro">
             <Particles
               params={particleConfig}
               className={styles.particleEffect}
-            />
+            /></a>
             <HomeSection>
               <HTMLTEXT html>{`<html>`}</HTMLTEXT>
               <HTMLTEXT body>{`<body>`}</HTMLTEXT>
@@ -109,20 +109,20 @@ export default function Home() {
                 </div>
               </div>
             </HomeSection>
-            <a name="about">
+            <a href={() => false} name="about">
               <About />
             </a>
             {/* </AboutSection> */}
-            <a name="projects">
+            <a href={() => false} name="projects">
               <NewProjects />
             </a>
-            <a name="blog">
+            <a href={() => false} name="blog">
               <Blog />
             </a>
-            <a name="stats">
+            <a href={() => false} name="stats">
               <Stats />
             </a>
-            <a name="contact">
+            <a href={() => false} name="contact">
               <Contact />
             </a>
           </div>
