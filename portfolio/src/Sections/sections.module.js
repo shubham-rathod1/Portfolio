@@ -84,7 +84,7 @@ const Heading = styled.p`
       ? "2%"
       : null};
       margin-left: ${props => props.contact ? "9%" : null};
-      margin-top: ${props => props.contact ? "4%" : null};
+      margin-top: ${props => props.contact ? "2%" : null};
   @media only screen and (max-width: 768px) {
     font-size: ${(props) =>
       props.about

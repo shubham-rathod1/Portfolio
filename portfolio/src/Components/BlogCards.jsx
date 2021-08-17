@@ -46,7 +46,7 @@ export default function BlogCards({ data }) {
                   </CardContent>
                 </a>
                 <CardActions>
-                  <Button size="small" color="primary">
+                  <Button size="small" color="primary" onClick = {() => window.open(`${item.link}`)} >
                     {" "}
                     Read on dev...
                   </Button>
