@@ -16,11 +16,12 @@ import {
 import { FaHtml5, FaReact, FaJs, FaCss3 } from "react-icons/fa";
 import { SiMongodb, SiRedux } from "react-icons/si";
 import { Heading } from "../../Sections/sections.module";
+import { HTMLTEXT } from "../../Pages/pages.module";
 
 const Container = styled.div`
   width: 100%;
   padding: 40px 0px;
-  background-color: #15161B;
+  background-color: #15161b;
 `;
 
 const Projects = () => {
@@ -52,18 +53,18 @@ const Projects = () => {
       repo_link: "https://github.com/shubham-rathod1/getharvest_clone",
       tech_stack: [<FaReact />, <SiRedux />, <FaJs />, <FaHtml5 />, <FaCss3 />],
     },
-    {
-      id: 2,
-      project_name: "United by Blue",
-      image:
-        "Project_images/united_by_blue.png",
-      project_desc:
-        "Eco-Friendly E-commerce Fashion Brand. Removes 1 pound of trash from ocean for every single product purchase.",
-      deploy_link: "#",
-      repo_link: "https://github.com/shubham-rathod1/united_by_blue_clone",
-      tech_stack: [<FaReact />,<SiRedux />, <FaJs />, <FaHtml5 />, <FaCss3 />],
-    },
-    
+    // {
+    //   id: 2,
+    //   project_name: "United by Blue",
+    //   image:
+    //     "Project_images/united_by_blue.png",
+    //   project_desc:
+    //     "Eco-Friendly E-commerce Fashion Brand. Removes 1 pound of trash from ocean for every single product purchase.",
+    //   deploy_link: "#",
+    //   repo_link: "https://github.com/shubham-rathod1/united_by_blue_clone",
+    //   tech_stack: [<FaReact />,<SiRedux />, <FaJs />, <FaHtml5 />, <FaCss3 />],
+    // },
+
     {
       id: 3,
       project_name: "Calendly Clone",
@@ -80,7 +81,7 @@ const Projects = () => {
       image: "Project_images/fathom_health.png",
       project_desc:
         "AI built for medical coding, combined with human infrastructure to maximize speed and accuracy.",
-      deploy_link: "https://fathomhealthclone.netlify.app/",
+      deploy_link: "https://fathomhealth.netlify.app/",
       repo_link: "https://github.com/shubham-rathod1/FathomHealth_Project",
       tech_stack: [<FaJs />, <FaHtml5 />, <FaCss3 />],
     },
@@ -89,9 +90,9 @@ const Projects = () => {
   return (
     <Container>
       <ProjectDiv>
-        {/* <Common> */}
+        <HTMLTEXT style={{ margin: "0% 0% -7% 33%" }} h1>{`<h1>`}</HTMLTEXT>
         <Heading projects>Projects</Heading>
-        {/* </Common> */}
+        <HTMLTEXT style={{ margin: "-4% 0% 4% 63%" }} h1>{`</h1>`}</HTMLTEXT>
         <Row>
           {projects.map((item) => (
             <BoxDiv key={item.id}>
@@ -105,7 +106,14 @@ const Projects = () => {
                     backgroundPosition: "center center",
                   }}
                 ></div>
-                <div style={{ margin: "25px" }}>
+                <div
+                  style={{
+                    margin: "25px",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                  }}
+                >
                   <ServiceBoxHeader style={{ textAlign: "center" }}>
                     {item.project_name}
                   </ServiceBoxHeader>
@@ -129,20 +137,28 @@ const Projects = () => {
                       </div>
                     ))}
                   </div>
-                  <A
-                    href={item.repo_link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "center",
+                    }}
                   >
-                    <FaGithub /> Code
-                  </A>
-                  <A
-                    href={item.deploy_link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaLink /> Demo
-                  </A>
+                    <A
+                      href={item.repo_link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaGithub /> Code
+                    </A>
+                    <A
+                      href={item.deploy_link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaLink /> Demo
+                    </A>
+                  </div>
                 </div>
               </ServiceBox>
             </BoxDiv>

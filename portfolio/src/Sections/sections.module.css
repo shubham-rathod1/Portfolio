@@ -68,7 +68,7 @@
   z-index: 2;
 }
 .fields {
-  margin: 10px 20px;
+  margin: 10px 10px;
   background-color: #f5f1f1;
   padding: 10px;
   border-radius: 5px;
@@ -76,18 +76,18 @@
 .name_and_email {
   display: flex;
   flex-direction: row;
-  margin-bottom: 0px;
+  margin: 0px;
 }
 .name {
   flex-basis: 50%;
-  margin: 20px;
+  margin: 20px 10px 10px 10px;
   background-color: #f5f1f1;
   padding: 10px;
   border-radius: 5px;
 }
 .email {
   flex-basis: 50%;
-  margin: 20px;
+  margin: 20px 10px 10px 10px;
   background-color: #f5f1f1;
   padding: 10px;
   border-radius: 5px;
@@ -156,11 +156,11 @@
   justify-content: center;
   margin: 0px;
 }
-.mapSection {
-  display: flex;
-  flex-basis: 50%;
-  width: 100%;
+.commonIconsFooter {
+  font-size: 30px;
+  color: white;
 }
+
 .form {
   border: 1px solid white;
   border-radius: 10px;
@@ -174,12 +174,16 @@
   color: white;
   font-size: 20px;
 }
+.contactLinks {
+  padding-top: 250px;
+}
 
 @media only screen and (max-width: 768px) {
   .profileImg {
     height: 220px;
     width: 220px;
   }
+  
   .meetmeContainer {
     margin-bottom: 50px;
   }
@@ -197,7 +201,12 @@
   .form {
     margin-bottom: 10%;
   }
-  .mapSection {
+  .contactLinks {
     display: none;
+  }
+}
+@media only screen and (min-width: 946px) and (max-width: 1250px) {
+  .name_and_email {
+    flex-direction: column;
   }
 }

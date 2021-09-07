@@ -21,10 +21,12 @@ import {
 } from "./pages.module";
 import NewProjects from "../Components/Projects/NewProjects";
 import Stats from "../Components/Stats/Stats";
+import Skills from "../Components/Skills/Skills";
 
 export default function Home() {
   const menuLinks = [
     { link: "About", name: "about" },
+    { link: "Skills", name: "skills" },
     { link: "Projects", name: "projects" },
     { link: "Blog", name: "blog" },
     { link: "Stats", name: "stats" },
@@ -70,11 +72,12 @@ export default function Home() {
         </MenuSection>
         <div className={styles.introSection}>
           <div style={{ flexBasis: "90%" }}>
-          <a href={() => false} name="intro">
-            <Particles
-              params={particleConfig}
-              className={styles.particleEffect}
-            /></a>
+            <a href={() => false} name="intro">
+              <Particles
+                params={particleConfig}
+                className={styles.particleEffect}
+              />
+            </a>
             <HomeSection>
               <HTMLTEXT html>{`<html>`}</HTMLTEXT>
               <HTMLTEXT body>{`<body>`}</HTMLTEXT>
@@ -89,7 +92,7 @@ export default function Home() {
               <HTMLTEXT>{`</h1>`}</HTMLTEXT>
               <HTMLTEXT>{`<p>`}</HTMLTEXT>
               <Paragraph fullstack typewriter>
-                Full Stack Web Developer
+                Full Stack Web Developer / React / Nodejs / MongoDb
               </Paragraph>
               <HTMLTEXT>{`</p>`}</HTMLTEXT>
               <div className={styles.introBtns}>
@@ -109,10 +112,13 @@ export default function Home() {
                 </div>
               </div>
             </HomeSection>
+            <div className={styles.hiddenDiv}></div>
             <a href={() => false} name="about">
               <About />
             </a>
-            {/* </AboutSection> */}
+            <a href={() => false} name="skills">
+              <Skills />
+            </a>
             <a href={() => false} name="projects">
               <NewProjects />
             </a>
