@@ -26,6 +26,8 @@ const Heading = styled.p`
   font-weight: ${(props) =>
     props.about
       ? "400"
+      : props.aboutOnMobile
+      ? "400"
       : props.blog
       ? "400"
       : props.projects
@@ -83,11 +85,13 @@ const Heading = styled.p`
       : props.contact
       ? "2%"
       : null};
-      margin-left: ${props => props.contact ? "9%" : null};
-      margin-top: ${props => props.contact ? "2%" : null};
+  margin-left: ${(props) => (props.contact ? "9%" : null)};
+  margin-top: ${(props) => (props.contact ? "2%" : null)};
   @media only screen and (max-width: 768px) {
     font-size: ${(props) =>
       props.about
+        ? "48px"
+        : props.aboutOnMobile
         ? "48px"
         : props.contact
         ? "48px"
@@ -97,7 +101,20 @@ const Heading = styled.p`
         ? "48px"
         : null};
     text-align: ${(props) =>
-      props.about ? "center" : props.contact ? "center" : null};
+      props.about
+        ? "center"
+        : props.contact
+        ? "center"
+        : props.aboutOnMobile
+        ? "center"
+        : null};
+    display: ${(props) => (props.about ? "none" : null)};
+    margin: ${(props) => (props.aboutOnMobile ? " 10% 0% 10% 0%" : null)};
+    font-family: ${(props) => (props.aboutOnMobile ? "Oswald" : null)};
+    line-height: ${(props) => (props.aboutOnMobile ? "25px" : null)};
+    letter-spacing: ${(props) => (props.aboutOnMobile ? "0.09em" : null)};
+    color: ${(props) => (props.aboutOnMobile ? "#68f5d9" : null)};
+    font-weight: ${(props) => (props.aboutOnMobile ? "400" : null)};
   }
 `;
 const AboutPara = styled.p`

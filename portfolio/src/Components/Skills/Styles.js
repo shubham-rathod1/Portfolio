@@ -20,6 +20,10 @@ export const H1 = styled.h1`
   font-family: Oswald;
   font-weight: 400;
   color: #68F5D9;
+  @media only screen and (max-width: 768px) {
+    font-size: 45px;
+    margin-top: 0px;
+  }
 `;
 export const Col = styled.div`
   display: flex;

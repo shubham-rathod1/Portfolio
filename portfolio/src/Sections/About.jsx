@@ -9,6 +9,7 @@ import styles from "./sections.module.css";
 export default function About() {
   return (
     <div className={styles.outerContainer}>
+      <Heading aboutOnMobile>About me...</Heading>
       <Grid container>
         <Grid item xs={12} sm={12} md={4} lg={4}>
           <div className={styles.picContainer}>
