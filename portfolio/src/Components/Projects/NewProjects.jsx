@@ -100,7 +100,7 @@ const Projects = () => {
         channel="youtube"
         autoplay
         isOpen={isOpen}
-        videoId="BNC6slYCj50"
+        videoId="1uuXGTBlOa4"
         onClose={() => setOpen(false)}
       />
 
@@ -183,13 +183,6 @@ const Projects = () => {
                         <FaLink /> Demo
                       </A>
                     )}
-                    {/* <A
-                      href={item.deploy_link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FaLink /> Demo
-                    </A> */}
                   </div>
                 </div>
               </ServiceBox>
