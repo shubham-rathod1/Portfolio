@@ -116,6 +116,9 @@ const Heading = styled.p`
     color: ${(props) => (props.aboutOnMobile ? "#68f5d9" : null)};
     font-weight: ${(props) => (props.aboutOnMobile ? "400" : null)};
   }
+  @media only screen and (min-width: 768px) {
+    display: ${props => props.aboutOnMobile ? "none" : null};
+  }
 `;
 const AboutPara = styled.p`
   color: #fff;

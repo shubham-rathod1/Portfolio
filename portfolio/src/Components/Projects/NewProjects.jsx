@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaGithub, FaNodeJs, FaLink } from "react-icons/fa";
 import styled from "styled-components";
+import ModalVideo from "react-modal-video";
 
 import {
   ProjectDiv,
@@ -12,11 +13,12 @@ import {
   BoxDiv,
 } from "./Styles";
 
-// import { Container, Common, H1 } from "../../SharedStyles/SharedStyles";
 import { FaHtml5, FaReact, FaJs, FaCss3 } from "react-icons/fa";
 import { SiMongodb, SiRedux } from "react-icons/si";
 import { Heading } from "../../Sections/sections.module";
 import { HTMLTEXT } from "../../Pages/pages.module";
+import "./video.scss";
+// import 'node_modules/react-modal-video/scss/modal-video.scss';
 
 const Container = styled.div`
   width: 100%;
@@ -53,18 +55,23 @@ const Projects = () => {
       repo_link: "https://github.com/shubham-rathod1/getharvest_clone",
       tech_stack: [<FaReact />, <SiRedux />, <FaJs />, <FaHtml5 />, <FaCss3 />],
     },
-    // {
-    //   id: 2,
-    //   project_name: "United by Blue",
-    //   image:
-    //     "Project_images/united_by_blue.png",
-    //   project_desc:
-    //     "Eco-Friendly E-commerce Fashion Brand. Removes 1 pound of trash from ocean for every single product purchase.",
-    //   deploy_link: "#",
-    //   repo_link: "https://github.com/shubham-rathod1/united_by_blue_clone",
-    //   tech_stack: [<FaReact />,<SiRedux />, <FaJs />, <FaHtml5 />, <FaCss3 />],
-    // },
-
+    {
+      id: 2,
+      project_name: "United by Blue",
+      image: "Project_images/united_by_blue.png",
+      project_desc:
+        "Eco-Friendly E-commerce Fashion Brand. Removes 1 pound of trash from ocean for every single product purchase.",
+      deploy_link: "#",
+      repo_link: "https://github.com/shubham-rathod1/united_by_blue_clone",
+      tech_stack: [
+        <FaReact />,
+        <FaNodeJs />,
+        <SiMongodb />,
+        <SiRedux />,
+        <FaJs />,
+        <FaCss3 />,
+      ],
+    },
     {
       id: 3,
       project_name: "Calendly Clone",
@@ -86,9 +93,17 @@ const Projects = () => {
       tech_stack: [<FaJs />, <FaHtml5 />, <FaCss3 />],
     },
   ];
-
+  const [isOpen, setOpen] = useState(false);
   return (
     <Container>
+      <ModalVideo
+        channel="youtube"
+        autoplay
+        isOpen={isOpen}
+        videoId="BNC6slYCj50"
+        onClose={() => setOpen(false)}
+      />
+
       <ProjectDiv>
         <HTMLTEXT style={{ margin: "0% 0% -7% 33%" }} h1>{`<h1>`}</HTMLTEXT>
         <Heading projects>Projects</Heading>
@@ -151,13 +166,30 @@ const Projects = () => {
                     >
                       <FaGithub /> Code
                     </A>
-                    <A
+                    {item.id === 2 ? (
+                      <A
+                        onClick={() => setOpen(true)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaLink /> Demo
+                      </A>
+                    ) : (
+                      <A
+                        href={item.deploy_link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaLink /> Demo
+                      </A>
+                    )}
+                    {/* <A
                       href={item.deploy_link}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <FaLink /> Demo
-                    </A>
+                    </A> */}
                   </div>
                 </div>
               </ServiceBox>

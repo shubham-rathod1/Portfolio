@@ -104,7 +104,7 @@ export default function Home() {
                   </a>
                 </div>
                 <div className={styles.resumeBtn}>
-                  <a target="_blank" href="Resume/Shubham_Rathod_resume.pdf">
+                  <a target="_blank" href="Resume/Shubham Rathod Resume.pdf">
                     <Button>
                       <SpanButton>Resume</SpanButton>
                     </Button>

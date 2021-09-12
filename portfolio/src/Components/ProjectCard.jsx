@@ -59,16 +59,6 @@ export default function ProjectCard({ img, title }) {
               </span>
             </h2>
           </div>
-          {/* <p className={styles.by}>
-            By{" "}
-            <a
-              href="https://codepen.io/leadArt"
-              className={styles.name}
-              target="_blank"
-            >
-              Leadart
-            </a>
-          </p> */}
         </div>
       </div>
     </div>

@@ -5,6 +5,7 @@ import { FaDev } from "react-icons/fa";
 
 import { Heading, AboutPara, ContactIcons } from "./sections.module";
 import styles from "./sections.module.css";
+import { HTMLTEXT } from "../Pages/pages.module";
 
 export default function About() {
   return (
@@ -60,7 +61,10 @@ export default function About() {
         </Grid>
         <Grid item xs={12} sm={12} md={8} lg={8}>
           <div className={styles.about}>
+            <HTMLTEXT style={{ margin: "0% 0% -10% -2%" }} h1>{`<h1>`}</HTMLTEXT>
             <Heading about>About me...</Heading>
+            <HTMLTEXT style={{ margin: "0% 0% 0% 65%" }} h1>{`</h1>`}</HTMLTEXT>
+
             <AboutPara about>
               Full Stack Developer with experience in designing, developing, and
               implementing applications and solutions using the MERN stack.

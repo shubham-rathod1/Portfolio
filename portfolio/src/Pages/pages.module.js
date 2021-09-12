@@ -96,11 +96,14 @@ const MenuLink = styled.li`
 const HomeSection = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
   align-items: left;
   padding-left: 6%;
   position: absolute;
     top: 1%;
+  @media only screen and (max-width: 768px) {
+    margin-top: 5%;
+  }
 `;
 
 const Heading = styled.p`
@@ -127,6 +130,7 @@ const Paragraph = styled.p`
   padding-right: ${(props) => (props.fullstack ? "30px" : null)};
   @media only screen and (max-width: 768px) {
     font-size: ${(props) => (props.fullstack ? "14px" : null)};
+    margin: ${props => props.fullstack ? "20px 0px 20px 0px" : null}
   }
 `;
 export {
