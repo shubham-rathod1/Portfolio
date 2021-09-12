@@ -4,7 +4,7 @@ import "./home.module.css";
 const Button = styled.button`
   margin: 20px auto;
   border: none;
-  font-size: 36px;
+  font-size: 2.5vw;
   position: relative;
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid #53c6aa;
@@ -57,20 +57,34 @@ const HTMLTEXT = styled.p`
   font-family: Montez;
   font-size: 20px;
   font-weight: 600;
-  color: #4a494b;
+  color: honeydew;
   margin-top: 5px;
   margin-bottom: 0px;
   &:hover {
     color: #53c6aa;
   }
   margin-left: ${(props) =>
-    props.html ? "3.7%" : props.body ? "5%" : props.h1 ? "5.8%" : null};
+    props.html
+      ? "0%"
+      : props.body
+      ? "1%"
+      : props.h1
+      ? "2%"
+      : props.p
+      ? "3%"
+      : null};
+  @media only screen and (max-width: 900px) {
+    display: none;
+  }
 `;
 const MenuLink = styled.li`
-  text-align: center;
+  text-align: left;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  margin-left: 15%;
   padding-top: 10px;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1.6vw;
   color: #fff;
   list-style-type: none;
   &:hover {
@@ -82,16 +96,18 @@ const MenuLink = styled.li`
 const HomeSection = styled.div`
   display: flex;
   flex-direction: column;
+  height: 100vh;
   align-items: left;
   padding-left: 6%;
-  @media only screen and (min-width: 768px) {
-    position: absolute;
+  position: absolute;
     top: 1%;
+  @media only screen and (max-width: 768px) {
+    margin-top: 5%;
   }
 `;
 
 const Heading = styled.p`
-  font-size: 100px;
+  font-size: 8vw;
   font-weight: 600;
   font-family: Oswald;
   color: #fff;
@@ -111,8 +127,10 @@ const Paragraph = styled.p`
   font-family: sans-serif;
   font-size: 18px;
   letter-spacing: ${(props) => (props.fullstack ? "0.3em" : null)};
+  padding-right: ${(props) => (props.fullstack ? "30px" : null)};
   @media only screen and (max-width: 768px) {
     font-size: ${(props) => (props.fullstack ? "14px" : null)};
+    margin: ${props => props.fullstack ? "20px 0px 20px 0px" : null}
   }
 `;
 export {

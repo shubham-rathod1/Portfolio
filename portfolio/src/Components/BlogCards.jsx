@@ -18,7 +18,7 @@ export default function BlogCards({ data }) {
         {data.map((item) => {
           return (
             <Grid item sm={6} xs={12} md={6} lg={6}>
-              <Card>
+              <Card style = {{display: "flex", flexDirection: "column", justifyContent:"space-between"}}>
                 <CardMedia className={styles.media} image={item.image} />
                 <a
                   rel="noreferrer"
@@ -46,7 +46,11 @@ export default function BlogCards({ data }) {
                   </CardContent>
                 </a>
                 <CardActions>
-                  <Button size="small" color="primary" onClick = {() => window.open(`${item.link}`)} >
+                  <Button
+                    size="small"
+                    color="primary"
+                    onClick={() => window.open(`${item.link}`)}
+                  >
                     {" "}
                     Read on dev...
                   </Button>
