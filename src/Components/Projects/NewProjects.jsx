@@ -54,7 +54,7 @@ const Projects = () => {
     {
       id: 1,
       project_name: 'NFT Bazaar',
-      image: 'Project_images/qrowdy.png',
+      image: 'Project_images/nftBazaar.png',
       project_desc:
         'NFT Market place where users can create and list their NFTs in market place. Buy / sell and view in users dashboard.',
       deploy_link: '#',
