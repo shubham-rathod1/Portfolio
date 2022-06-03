@@ -57,7 +57,7 @@ const Projects = () => {
       image: 'Project_images/nftBazaar.png',
       project_desc:
         'NFT Market place where users can create and list their NFTs in market place. Buy / sell and view in users dashboard.',
-      deploy_link: '#',
+      deploy_link: 'https://nft-bazzaar.netlify.app/',
       repo_link: 'https://github.com/shubham-rathod1/NFT_Bazaar',
       tech_stack: [
         <FaReact />,
